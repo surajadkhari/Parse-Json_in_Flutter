@@ -1,12 +1,13 @@
 import 'export_service.dart';
 
 class Apiservice {
+  List<UsersModel> userData = [];
   Future<dynamic> fetchData() async {
-    Response response = await get(Uri.parse(endPoint));
+    var response = await get(Uri.parse(endPoint));
     List jsonData = jsonDecode(response.body)['data'];
 
 //Mapping
-    List userData = [];
+
     for (int index = 0; index < jsonData.length; index++) {
       userData.add(
         UsersModel(
