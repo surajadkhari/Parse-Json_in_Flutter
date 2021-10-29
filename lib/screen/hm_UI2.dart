@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:parse_json_flutter/components/pendingorder_section.dart';
+import 'package:parse_json_flutter/components/verify_order.dart';
 
 class NewUI extends StatelessWidget {
   const NewUI({Key? key}) : super(key: key);
@@ -20,13 +21,16 @@ class NewUI extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            child: Image(
+            child: const Image(
                 height: 65,
                 image: NetworkImage(
                     'https://www.himelectronics.com/MediaThumb/large/Media/4257_him_1.jpg')),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
+          ),
+          VerifyorderSection(
+            
           ),
           Container(
               margin: EdgeInsets.all(10),
@@ -72,6 +76,7 @@ class NewUI extends StatelessWidget {
           //   child:
 
           tableDataWidget(menustyle),
+
           // )
         ],
       ),
