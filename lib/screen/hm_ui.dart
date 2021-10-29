@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:parse_json_flutter/screen/export_screens.dart';
 
 class NeworderPage extends StatelessWidget {
   const NeworderPage({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class NeworderPage extends StatelessWidget {
             child: Image(
                 height: 65,
                 image: NetworkImage(
-                    'https://himelectronics.com/Media/him_electronics_logo.png')),
+                    'https://www.himelectronics.com/MediaThumb/large/Media/4257_him_1.jpg')),
           ),
           SizedBox(
             height: 30,
@@ -88,16 +88,16 @@ class NeworderPage extends StatelessWidget {
                 Text(
                   "Detail",
                   style: menustyle,
-                )
+                ),
               ],
             ),
           ),
           SizedBox(
-            height: 300,
+            height: 400,
             child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 physics: ScrollPhysics(parent: BouncingScrollPhysics()),
-                itemCount: 9,
+                itemCount: 10,
                 itemBuilder: (context, index) {
                   return Container(
                     margin: EdgeInsets.only(left: 10, right: 10, bottom: 2),
@@ -112,7 +112,7 @@ class NeworderPage extends StatelessWidget {
                       children: [
                         Text("#072", style: menustyle),
                         Text(
-                          "Rohit Sharma ",
+                          "Rohit Sharma",
                           style: menustyle,
                         ),
                         Text(
@@ -120,7 +120,7 @@ class NeworderPage extends StatelessWidget {
                           style: menustyle,
                         ),
                         Icon(Icons.visibility_outlined,
-                            color: Color(0xff94BA4D))
+                            color: Color(0xff94BA4D)),
                       ],
                     ),
                   );
