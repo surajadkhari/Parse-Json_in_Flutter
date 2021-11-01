@@ -6,7 +6,9 @@ class Apiservice {
     var response = await get(Uri.parse(endPoint));
     List jsonData = jsonDecode(response.body)['data'];
 
-//Mapping
+
+
+//Using for each
 
     for (int index = 0; index < jsonData.length; index++) {
       userData.add(

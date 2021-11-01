@@ -1,6 +1,7 @@
 import 'package:parse_json_flutter/providers/export_provider.dart';
 import 'package:parse_json_flutter/providers/userdata_provider.dart';
 
+import 'detialpage.dart';
 import 'export_screens.dart';
 
 class Homepage extends StatelessWidget {
@@ -29,10 +30,18 @@ class Homepage extends StatelessWidget {
             return ListView.builder(
                 itemCount: data.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(data[index].first_name.toString()),
-                    leading: CircleAvatar(
-                      backgroundImage: NetworkImage(data[index].avatar),
+                  return InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => DetailPage(
+                                index: index,
+                              )));
+                    },
+                    child: ListTile(
+                      title: Text(data[index].first_name.toString()),
+                      leading: CircleAvatar(
+                        backgroundImage: NetworkImage(data[index].avatar),
+                      ),
                     ),
                   );
                 });
