@@ -10,6 +10,7 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('1.StateNotifier to Fecth data'),
+        leading: Icon(Icons.refresh),
       ),
       body: Center(
         child: Consumer(builder: (context, watch, child) {
@@ -32,6 +33,7 @@ class Homepage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return InkWell(
                     onTap: () {
+                      print('Hello');
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => DetailPage(
                                 index: index,

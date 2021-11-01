@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class UsersModel {
   final int id;
   final String email;
@@ -10,4 +12,12 @@ class UsersModel {
       required this.first_name,
       required this.last_name,
       required this.avatar});
+
+  //Map
+  factory UsersModel.fromJson(Map<String, dynamic> json) => UsersModel(
+      id: json['id'],
+      email: json['email'],
+      first_name: json['first_name'],
+      last_name: json['last_name'],
+      avatar: json['avatar']);
 }
